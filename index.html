@@ -52,7 +52,7 @@
         z-index: 1;
       }
       
-      #boundingbox {
+      .boundingbox {
         position: absolute;
         font-family: sans-serif;
         margin-top: 200px;
@@ -84,7 +84,7 @@
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/outdoors-v11', // stylesheet location
         center: [-95.7129, 37.0902], // starting position [lng, lat]
-        zoom: 3 // starting zoom
+        zoom: 5 // starting zoom
       });
 
       let lng;
@@ -94,7 +94,7 @@
       const eleDisplay = document.getElementById('ele');
 
       const marker = new mapboxgl.Marker({
-        'color': '#314ccd'
+        'color': '#8B0000'
       });
 
       map.on('click', (event) => {
