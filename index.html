@@ -20,53 +20,70 @@
         top: 0;
         bottom: 0;
         width: 100%;
+         z-index: -1;
       }
 
       .latlongbox {
         position: absolute;
         font-family: sans-serif;
         margin-top: 10px;
-        margin-left: 10px;
+        margin-left: 50px;
         padding: 5px;
         width: 200px;
-        border: 2px solid black;
-        font-size: 20px;
+        font-size: 25px;
         color: #222;
         background-color: #fff;
-        bottom: 1;
+        bottom: 35px;
         z-index: 1;
       }
       
        .elevationbox {
         position: absolute;
         font-family: sans-serif;
-        margin-top: 20px;
-        margin-left: 10px;
-        padding: 5px;
-        width: 220px;
-        border: 2px solid black;
-        font-size: 20px;
+        margin-left:55px;
+        width: 300px;
+        font-size: 25px;
         color: #222;
-        background-color: #fff;
-        top: 55px;
+        background-color: white;
+        bottom: 95px;
         z-index: 1;
       }
       
-      .boundingbox {
-        position: absolute;
-        font-family: sans-serif;
-        margin-top: 200px;
-        margin-left: 100px;
-        padding: 5px;
-        width: 220px;
-        border: 2px solid black;
-        font-size: 20px;
-        color: #8080;
-        background-color: #8080;
-        bottom: 0;
-        z-index: -1;
-      }
-    </style>
+    h4 {
+    text-align: center;
+    
+    padding: 10px;
+    font-size: 27px;
+    z-index: 1;
+  }
+  p {
+    text-align: justify;
+  }
+
+  #thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,.75);
+  }
+  .fullCard {
+    width: 325px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 20px;
+    bottom: 0px;
+    z-index: -1;
+    position: absolute; 
+    bottom: 0;
+    background-color: white;
+  }
+  .cardContent {
+    padding: 10px;
+         
+  }
+  .cardText {
+    margin-bottom: 10px;
+     
+  }
+  </style>
   </head>
 
   <body>
@@ -78,6 +95,11 @@
     <div class="elevationbox">
       <div>Elevation:&nbsp;<span id="ele"></span></div>
     </div>
+    <div class="fullCard" id="thumbnail">
+  <div class="cardContent">
+    <div class="cardText">
+      <h4></h4>     
+</div>
     <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lzc29sdXRpb25zbGxjbWFwcyIsImEiOiJjamw4Y2RiMDAweGx4M2txb3NxZnBxeDFoIn0.MfwIqWM5qlGDkyDOpXmQFQ';
       const map = new mapboxgl.Map({
